@@ -48,8 +48,8 @@ The primary objective of the AI Quiz & Recommendation System is to revolutionize
 
 1. **Clone the Repository:**
    ```
-   git clone https://github.com/prathameshv07/ai-quiz-system.git
-   cd ai-quiz-system
+   git clone https://github.com/prathameshv07/AI_Quiz_System.git
+   cd AI_Quiz_System
    ```
 
 2. **Create and Activate Virtual Environment:**
@@ -88,7 +88,7 @@ The primary objective of the AI Quiz & Recommendation System is to revolutionize
 ## 6. Detailed Project Structure
 
 ```
-ai-quiz-system/
+AI_Quiz_System/
 ├── app.py                          # Main Streamlit application entry point
 ├── core/
 │   ├── __init__.py                 # Package initialization

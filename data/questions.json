@@ -1,0 +1,897 @@
+{
+  "metadata": {
+    "version": "1.1",
+    "total_questions": 63,
+    "demo_questions": 10,
+    "knowledge_areas": ["transformers", "gans", "pytorch", "generative_ai", "deep_learning", "ml_basics"],
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "last_updated": "2024-01-15"
+  },
+  "demo_questions": [1, 8, 15, 22, 28, 35, 42, 49, 56, 63],
+  "questions": [
+    {
+      "id": 1,
+      "question_text": "What does tokenizer.encode() return?",
+      "options": {
+        "a": "Tokens",
+        "b": "Token IDs",
+        "c": "Strings",
+        "d": "Vectors"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "transformers",
+      "difficulty_level": "beginner",
+      "explanation": "tokenizer.encode() converts text into numerical token IDs that neural networks can process. These IDs represent positions in the tokenizer's vocabulary."
+    },
+    {
+      "id": 2,
+      "question_text": "Which architecture forms the base of GPT models?",
+      "options": {
+        "a": "CNN",
+        "b": "LSTM",
+        "c": "Transformer decoder",
+        "d": "Transformer encoder"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "GPT models are based on transformer decoder architecture, which uses causal self-attention to generate text autoregressive."
+    },
+    {
+      "id": 3,
+      "question_text": "Which function decodes tokens into string?",
+      "options": {
+        "a": "tokenizer.decode()",
+        "b": "tokenizer.parse()",
+        "c": "tokenizer.tokenize()",
+        "d": "tokenizer.convert_tokens()"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "transformers",
+      "difficulty_level": "beginner",
+      "explanation": "tokenizer.decode() converts token IDs back into human-readable text by looking up the vocabulary mapping."
+    },
+    {
+      "id": 4,
+      "question_text": "Which model is NOT generative?",
+      "options": {
+        "a": "GPT-3",
+        "b": "BERT",
+        "c": "StyleGAN",
+        "d": "VAE"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "BERT is a discriminative model designed for understanding and classification tasks, not for generating new content."
+    },
+    {
+      "id": 5,
+      "question_text": "Which generative model was created by OpenAI for image generation?",
+      "options": {
+        "a": "GPT-4",
+        "b": "BERT",
+        "c": "DALL·E",
+        "d": "T5"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "beginner",
+      "explanation": "DALL·E is OpenAI's text-to-image generation model that creates images from textual descriptions."
+    },
+    {
+      "id": 6,
+      "question_text": "Which of the following is used for image-to-image translation?",
+      "options": {
+        "a": "CycleGAN",
+        "b": "GPT",
+        "c": "LSTM",
+        "d": "BERT"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "gans",
+      "difficulty_level": "intermediate",
+      "explanation": "CycleGAN enables unpaired image-to-image translation by learning mappings between different image domains."
+    },
+    {
+      "id": 7,
+      "question_text": "Which library is used to load pre-trained GPT-2 models? from ______ import GPT2LMHeadModel",
+      "options": {
+        "a": "keras",
+        "b": "sklearn",
+        "c": "transformers",
+        "d": "nltk"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "transformers",
+      "difficulty_level": "beginner",
+      "explanation": "The 'transformers' library by Hugging Face provides easy access to pre-trained transformer models like GPT-2."
+    },
+    {
+      "id": 8,
+      "question_text": "The discriminator in a GAN acts as a:",
+      "options": {
+        "a": "Generator",
+        "b": "Loss function",
+        "c": "Binary classifier",
+        "d": "Regression model"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "gans",
+      "difficulty_level": "intermediate",
+      "explanation": "The discriminator is a binary classifier that distinguishes between real and generated samples, providing feedback to the generator."
+    },
+    {
+      "id": 9,
+      "question_text": "In a VAE, what does the encoder output?",
+      "options": {
+        "a": "A label",
+        "b": "A reconstruction",
+        "c": "Mean and variance",
+        "d": "Hidden layers"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "advanced",
+      "explanation": "VAE encoder outputs parameters (mean and variance) of a probability distribution in the latent space, enabling smooth interpolation."
+    },
+    {
+      "id": 10,
+      "question_text": "Which command trains a model in TensorFlow?",
+      "options": {
+        "a": "model.train()",
+        "b": "model.compile()",
+        "c": "model.fit()",
+        "d": "model.predict()"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "deep_learning",
+      "difficulty_level": "beginner",
+      "explanation": "model.fit() trains the model on training data, while compile() configures the model and predict() makes predictions."
+    },
+    {
+      "id": 11,
+      "question_text": "What does .backward() do in PyTorch?",
+      "options": {
+        "a": "Saves model",
+        "b": "Computes gradients",
+        "c": "Updates weights",
+        "d": "Normalizes tensors"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "intermediate",
+      "explanation": ".backward() computes gradients using backpropagation. Weight updates are done separately by the optimizer."
+    },
+    {
+      "id": 12,
+      "question_text": "Stable Diffusion uses which backbone architecture?",
+      "options": {
+        "a": "BERT",
+        "b": "ResNet",
+        "c": "UNet",
+        "d": "VGG"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "advanced",
+      "explanation": "Stable Diffusion uses UNet architecture for its denoising process, which has encoder-decoder structure with skip connections."
+    },
+    {
+      "id": 13,
+      "question_text": "In PyTorch, torch.nn.BCELoss() is used for:",
+      "options": {
+        "a": "Regression",
+        "b": "Binary classification",
+        "c": "Sequence generation",
+        "d": "Clustering"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "intermediate",
+      "explanation": "BCELoss (Binary Cross-Entropy Loss) is specifically designed for binary classification tasks with sigmoid activation."
+    },
+    {
+      "id": 14,
+      "question_text": "What is the typical activation in GAN's generator output?",
+      "options": {
+        "a": "ReLU",
+        "b": "Tanh",
+        "c": "Softmax",
+        "d": "Sigmoid"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "gans",
+      "difficulty_level": "intermediate",
+      "explanation": "Tanh activation is commonly used in GAN generators as it outputs values in [-1, 1] range, suitable for normalized image data."
+    },
+    {
+      "id": 15,
+      "question_text": "Which task is not directly related to generative AI?",
+      "options": {
+        "a": "Text summarization",
+        "b": "Image classification",
+        "c": "Style transfer",
+        "d": "Text-to-image generation"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "beginner",
+      "explanation": "Image classification is a discriminative task that identifies existing content, while generative AI creates new content."
+    },
+    {
+      "id": 16,
+      "question_text": "The UNet model in diffusion contains:",
+      "options": {
+        "a": "Encoder-decoder",
+        "b": "Only encoder",
+        "c": "CNN layers only",
+        "d": "LSTM layers"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "advanced",
+      "explanation": "UNet has an encoder-decoder architecture with skip connections, allowing it to preserve spatial information while denoising."
+    },
+    {
+      "id": 17,
+      "question_text": "Which is correct to fine-tune a Hugging Face model? trainer = Trainer(model=model, ...) trainer.______()",
+      "options": {
+        "a": "start()",
+        "b": "run()",
+        "c": "train()",
+        "d": "execute()"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "The Trainer class in Hugging Face uses the .train() method to start the fine-tuning process."
+    },
+    {
+      "id": 18,
+      "question_text": "Which function is used to create embeddings in transformers?",
+      "options": {
+        "a": "nn.Embedding()",
+        "b": "nn.Linear()",
+        "c": "nn.Conv2d()",
+        "d": "nn.RNN()"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "nn.Embedding() creates learnable lookup tables that convert token IDs to dense vector representations."
+    },
+    {
+      "id": 19,
+      "question_text": "To remove gradients temporarily, use:",
+      "options": {
+        "a": "with torch.no_grad():",
+        "b": "torch.disable_grad()",
+        "c": "stop_gradient()",
+        "d": "freeze_model()"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "intermediate",
+      "explanation": "torch.no_grad() context manager disables gradient computation temporarily, useful for inference to save memory."
+    },
+    {
+      "id": 20,
+      "question_text": "Tokenization is a preprocessing step mainly in:",
+      "options": {
+        "a": "Image models",
+        "b": "Text models",
+        "c": "GANs",
+        "d": "VAEs"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "transformers",
+      "difficulty_level": "beginner",
+      "explanation": "Tokenization breaks text into smaller units (tokens) that can be processed by neural networks, essential for NLP models."
+    },
+    {
+      "id": 21,
+      "question_text": "Latent space refers to:",
+      "options": {
+        "a": "Output of the classifier",
+        "b": "Hidden features used to generate outputs",
+        "c": "Hyperparameters",
+        "d": "Input features"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Latent space is a compressed representation of data where generative models learn meaningful patterns to create new samples."
+    },
+    {
+      "id": 22,
+      "question_text": "Which transformer-based model is designed for text generation?",
+      "options": {
+        "a": "BERT",
+        "b": "GPT",
+        "c": "VGG",
+        "d": "ResNet"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "GPT (Generative Pre-trained Transformer) is specifically designed for autoregressive text generation using decoder-only architecture."
+    },
+    {
+      "id": 23,
+      "question_text": "Which function saves a Hugging Face model?",
+      "options": {
+        "a": "model.save_model()",
+        "b": "model.save_pretrained()",
+        "c": "model.write()",
+        "d": "model.save()"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "save_pretrained() saves both the model weights and configuration in a format that can be loaded later."
+    },
+    {
+      "id": 24,
+      "question_text": "What is the role of temperature in text generation?",
+      "options": {
+        "a": "Controls output length",
+        "b": "Controls randomness",
+        "c": "Controls grammar",
+        "d": "Controls embedding size"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Temperature scales the probability distribution: lower values make outputs more deterministic, higher values increase randomness."
+    },
+    {
+      "id": 25,
+      "question_text": "In PyTorch, the optimizer is initialized with:",
+      "options": {
+        "a": "model only",
+        "b": "model.parameters()",
+        "c": "dataset",
+        "d": "loss function"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "intermediate",
+      "explanation": "Optimizers need model.parameters() to know which parameters to update during training."
+    },
+    {
+      "id": 26,
+      "question_text": "Which of the following is a type of generative model?",
+      "options": {
+        "a": "Decision Tree",
+        "b": "Random Forest",
+        "c": "Variational Autoencoder",
+        "d": "Logistic Regression"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "beginner",
+      "explanation": "VAEs learn to encode data into latent space and decode it back, enabling generation of new samples."
+    },
+    {
+      "id": 27,
+      "question_text": "Which keyword freezes weights in PyTorch?",
+      "options": {
+        "a": "require_grad = False",
+        "b": "no_grad = True",
+        "c": "freeze = True",
+        "d": "optimizer.freeze()"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "intermediate",
+      "explanation": "Setting requires_grad=False prevents PyTorch from computing gradients for those parameters during backpropagation."
+    },
+    {
+      "id": 28,
+      "question_text": "What does \"zero-shot learning\" in generative models mean?",
+      "options": {
+        "a": "No learning is required",
+        "b": "No supervision is needed",
+        "c": "Model performs tasks without direct training on that task",
+        "d": "Model uses only one input"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "advanced",
+      "explanation": "Zero-shot learning allows models to perform tasks they weren't explicitly trained on by leveraging learned representations."
+    },
+    {
+      "id": 29,
+      "question_text": "Text-to-image generation typically uses:",
+      "options": {
+        "a": "Transformers only",
+        "b": "CNNs only",
+        "c": "Combined vision and language models",
+        "d": "Reinforcement learning"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "advanced",
+      "explanation": "Text-to-image models combine language understanding (transformers) with image generation capabilities (CNNs/diffusion)."
+    },
+    {
+      "id": 30,
+      "question_text": "VAEs use which concept from probability theory?",
+      "options": {
+        "a": "Markov Chains",
+        "b": "K-Means",
+        "c": "Bayesian Inference",
+        "d": "Kullback-Leibler Divergence"
+      },
+      "correct_answer": "d",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "advanced",
+      "explanation": "VAEs use KL divergence in their loss function to ensure the latent space follows a prior distribution (usually Gaussian)."
+    },
+    {
+      "id": 31,
+      "question_text": "Which one is a diffusion model?",
+      "options": {
+        "a": "GPT-3",
+        "b": "DALL·E 2",
+        "c": "Stable Diffusion",
+        "d": "CycleGAN"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Stable Diffusion is a latent diffusion model that generates images by iteratively denoising random noise."
+    },
+    {
+      "id": 32,
+      "question_text": "Autoregressive models predict:",
+      "options": {
+        "a": "Random output",
+        "b": "Next token based on previous ones",
+        "c": "Entire sequence at once",
+        "d": "Labels"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Autoregressive models generate sequences one token at a time, using previously generated tokens as context."
+    },
+    {
+      "id": 33,
+      "question_text": "In a GAN, the generator takes which kind of input?",
+      "options": {
+        "a": "Text",
+        "b": "Labels",
+        "c": "Noise vector",
+        "d": "Image"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "gans",
+      "difficulty_level": "intermediate",
+      "explanation": "The generator takes random noise (usually Gaussian) as input and transforms it into realistic data samples."
+    },
+    {
+      "id": 34,
+      "question_text": "Prompt engineering is a key technique in which type of generative AI model?",
+      "options": {
+        "a": "Autoencoders",
+        "b": "GANs",
+        "c": "Large Language Models",
+        "d": "DBSCAN"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Prompt engineering involves crafting input prompts to guide LLMs toward desired outputs without additional training."
+    },
+    {
+      "id": 35,
+      "question_text": "To control the randomness of model output:",
+      "options": {
+        "a": "Use temperature",
+        "b": "Use alpha",
+        "c": "Use learning_rate",
+        "d": "Use momentum"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Temperature parameter controls the randomness in sampling: lower values make outputs more deterministic."
+    },
+    {
+      "id": 36,
+      "question_text": "Which format is used to save model weights in PyTorch?",
+      "options": {
+        "a": ".json",
+        "b": ".txt",
+        "c": ".pth",
+        "d": ".h5"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "beginner",
+      "explanation": ".pth (PyTorch) files store model state dictionaries containing weights and biases in a compressed format."
+    },
+    {
+      "id": 37,
+      "question_text": "Diffusion models are primarily used for:",
+      "options": {
+        "a": "Classification",
+        "b": "Denoising and generation",
+        "c": "Clustering",
+        "d": "Regression"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Diffusion models learn to reverse a gradual noising process, enabling high-quality image and data generation."
+    },
+    {
+      "id": 38,
+      "question_text": "GANs are made up of which two components?",
+      "options": {
+        "a": "Encoder and Decoder",
+        "b": "Generator and Discriminator",
+        "c": "Classifier and Regressor",
+        "d": "Actor and Critic"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "gans",
+      "difficulty_level": "beginner",
+      "explanation": "GANs consist of a generator that creates fake data and a discriminator that tries to distinguish real from fake data."
+    },
+    {
+      "id": 39,
+      "question_text": "What is the main training challenge of GANs?",
+      "options": {
+        "a": "Underfitting",
+        "b": "Overfitting",
+        "c": "Mode collapse",
+        "d": "Low variance"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "gans",
+      "difficulty_level": "advanced",
+      "explanation": "Mode collapse occurs when the generator produces limited variety in outputs, failing to capture the full data distribution."
+    },
+    {
+      "id": 40,
+      "question_text": "What is the main goal of the generator in a GAN?",
+      "options": {
+        "a": "Maximize classification accuracy",
+        "b": "Generate realistic data",
+        "c": "Reduce overfitting",
+        "d": "Compress the input"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "gans",
+      "difficulty_level": "intermediate",
+      "explanation": "The generator's objective is to create synthetic data that is indistinguishable from real data to fool the discriminator."
+    },
+    {
+      "id": 41,
+      "question_text": "What does .train() do in PyTorch models?",
+      "options": {
+        "a": "Trains the model",
+        "b": "Sets model to training mode",
+        "c": "Saves the model",
+        "d": "Loads the model"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "intermediate",
+      "explanation": ".train() sets the model to training mode, enabling dropout and batch normalization behaviors during training."
+    },
+    {
+      "id": 42,
+      "question_text": "from transformers import pipeline text_gen = pipeline(\"_________\")",
+      "options": {
+        "a": "generate",
+        "b": "text2text",
+        "c": "text-generation",
+        "d": "auto"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "transformers",
+      "difficulty_level": "beginner",
+      "explanation": "The correct pipeline task name for text generation in Hugging Face transformers is 'text-generation'."
+    },
+    {
+      "id": 43,
+      "question_text": "Which of the following are common generative AI tasks?",
+      "options": {
+        "a": "Classification and regression",
+        "b": "Clustering and dimensionality reduction",
+        "c": "Image generation and style transfer",
+        "d": "None of the above"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "beginner",
+      "explanation": "Generative AI focuses on creating new content like images, text, audio, and applying style transformations."
+    },
+    {
+      "id": 44,
+      "question_text": "To generate image with DALL·E, you input:",
+      "options": {
+        "a": "Text prompt",
+        "b": "Labels",
+        "c": "Images",
+        "d": "Numbers"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "beginner",
+      "explanation": "DALL·E is a text-to-image model that generates images from natural language descriptions (text prompts)."
+    },
+    {
+      "id": 45,
+      "question_text": "To generate text with GPT-2, which function is used?",
+      "options": {
+        "a": "model.generate()",
+        "b": "model.predict()",
+        "c": "model.transform()",
+        "d": "model.output()"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "The .generate() method in Hugging Face transformers handles text generation with various decoding strategies."
+    },
+    {
+      "id": 46,
+      "question_text": "What is \"mode collapse\" in Generative Adversarial Networks (GANs)?",
+      "options": {
+        "a": "When the discriminator fails to train",
+        "b": "When the generator produces diverse outputs",
+        "c": "When the generator always produces similar or identical outputs",
+        "d": "When the GAN model overfits the training data"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "gans",
+      "difficulty_level": "advanced",
+      "explanation": "Mode collapse is a failure mode where the generator produces limited variety, ignoring parts of the data distribution."
+    },
+    {
+      "id": 47,
+      "question_text": "Which of the following adds noise in a diffusion model?",
+      "options": {
+        "a": "Gaussian noise",
+        "b": "Dropout",
+        "c": "Batch norm",
+        "d": "ReLU"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Diffusion models progressively add Gaussian noise to data during the forward process, then learn to reverse it."
+    },
+    {
+      "id": 48,
+      "question_text": "Which one is not a pretraining strategy for LLMs?",
+      "options": {
+        "a": "Next-token prediction",
+        "b": "Masked token prediction",
+        "c": "Noise prediction",
+        "d": "Rule-based parsing"
+      },
+      "correct_answer": "d",
+      "knowledge_area": "transformers",
+      "difficulty_level": "advanced",
+      "explanation": "Rule-based parsing is a traditional NLP technique, not a neural pretraining strategy used in modern LLMs."
+    },
+    {
+      "id": 49,
+      "question_text": "In LSTM, hidden state is passed as:",
+      "options": {
+        "a": "None",
+        "b": "h0 and c0",
+        "c": "z0",
+        "d": "vector"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "deep_learning",
+      "difficulty_level": "intermediate",
+      "explanation": "LSTMs use both hidden state (h0) and cell state (c0) to maintain short-term and long-term memory."
+    },
+    {
+      "id": 50,
+      "question_text": "Which model is commonly used for text generation?",
+      "options": {
+        "a": "CNN",
+        "b": "LSTM",
+        "c": "k-NN",
+        "d": "Naive Bayes"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "deep_learning",
+      "difficulty_level": "intermediate",
+      "explanation": "LSTMs can model sequential dependencies in text, making them suitable for generating coherent text sequences."
+    },
+    {
+      "id": 51,
+      "question_text": "What does the top_k parameter control in text generation?",
+      "options": {
+        "a": "Max output length",
+        "b": "Sampling from top k probable tokens",
+        "c": "Sentence temperature",
+        "d": "Prompt length"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Top-k sampling restricts token selection to the k most probable candidates, improving generation quality."
+    },
+    {
+      "id": 52,
+      "question_text": "The core idea of diffusion models involves:",
+      "options": {
+        "a": "Adding and removing noise",
+        "b": "Reinforcement learning",
+        "c": "Tree-based decisions",
+        "d": "Token splitting"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Diffusion models learn to reverse a noising process, gradually transforming noise into coherent data."
+    },
+    {
+      "id": 53,
+      "question_text": "Which of the following is not a loss function commonly used in GANs?",
+      "options": {
+        "a": "Binary cross-entropy",
+        "b": "Hinge loss",
+        "c": "Perceptual loss",
+        "d": "Categorical cross-entropy"
+      },
+      "correct_answer": "d",
+      "knowledge_area": "gans",
+      "difficulty_level": "advanced",
+      "explanation": "Categorical cross-entropy is used for multi-class classification, not typical in GAN training which focuses on real/fake discrimination."
+    },
+    {
+      "id": 54,
+      "question_text": "Which tokenizer would you use with GPT-2 in Hugging Face?",
+      "options": {
+        "a": "GPT2Tokenizer",
+        "b": "GPTTokenizer",
+        "c": "TextTokenizer",
+        "d": "WordTokenizer"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "GPT2Tokenizer is the specific tokenizer class designed for GPT-2 models in the Hugging Face transformers library."
+    },
+    {
+      "id": 55,
+      "question_text": "To generate with top-p sampling, set:",
+      "options": {
+        "a": "top_p=0.9",
+        "b": "max_len=20",
+        "c": "top_k=50",
+        "d": "pad_token_id=0"
+      },
+      "correct_answer": "a",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "intermediate",
+      "explanation": "Top-p (nucleus) sampling uses the top_p parameter to sample from the smallest set of tokens whose cumulative probability exceeds the threshold."
+    },
+    {
+      "id": 56,
+      "question_text": "Which of these is an open-source model for text generation?",
+      "options": {
+        "a": "ChatGPT",
+        "b": "GPT-Neo",
+        "c": "Google Search",
+        "d": "LLaMA only"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "generative_ai",
+      "difficulty_level": "beginner",
+      "explanation": "GPT-Neo is an open-source alternative to GPT-3 developed by EleutherAI, available for public use and modification."
+    },
+    {
+      "id": 57,
+      "question_text": "To evaluate perplexity, you need:",
+      "options": {
+        "a": "MSE",
+        "b": "Cross-entropy",
+        "c": "Accuracy",
+        "d": "AUC"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "ml_basics",
+      "difficulty_level": "intermediate",
+      "explanation": "Perplexity is calculated from cross-entropy loss and measures how well a language model predicts the next token in a sequence."
+    },
+    {
+      "id": 58,
+      "question_text": "What is used for backpropagation in PyTorch?",
+      "options": {
+        "a": ".step()",
+        "b": ".zero_grad()",
+        "c": ".backward()",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "intermediate",
+      "explanation": "All three methods are used in PyTorch training: .backward() computes gradients, .step() updates weights, and .zero_grad() clears gradients."
+    },
+    {
+      "id": 59,
+      "question_text": "Which is not a text generation method in Hugging Face?",
+      "options": {
+        "a": "greedy",
+        "b": "beam",
+        "c": "top_k",
+        "d": "backtrack"
+      },
+      "correct_answer": "d",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "Backtrack is not a text generation method in Hugging Face. The library supports greedy, beam search, and top-k sampling methods."
+    },
+    {
+      "id": 60,
+      "question_text": "StyleGAN is primarily used for generating:",
+      "options": {
+        "a": "Music",
+        "b": "Videos",
+        "c": "Human faces",
+        "d": "Audio"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "gans",
+      "difficulty_level": "intermediate",
+      "explanation": "StyleGAN is specifically designed for high-quality human face generation with fine-grained control over facial features and styles."
+    },
+    {
+      "id": 61,
+      "question_text": "Transformer models use:",
+      "options": {
+        "a": "Convolution layers",
+        "b": "Self-attention",
+        "c": "Pooling",
+        "d": "Dropout"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "transformers",
+      "difficulty_level": "intermediate",
+      "explanation": "Self-attention is the core mechanism in transformer models that allows each position to attend to all positions in the input sequence."
+    },
+    {
+      "id": 62,
+      "question_text": "What does .train() do in PyTorch models?",
+      "options": {
+        "a": "Trains the model",
+        "b": "Sets model to training mode",
+        "c": "Saves the model",
+        "d": "Loads the model"
+      },
+      "correct_answer": "b",
+      "knowledge_area": "pytorch",
+      "difficulty_level": "intermediate",
+      "explanation": ".train() sets the model to training mode, enabling dropout and batch normalization behaviors during training."
+    },
+    {
+      "id": 63,
+      "question_text": "from transformers import pipeline text_gen = pipeline(\"_________\")",
+      "options": {
+        "a": "generate",
+        "b": "text2text",
+        "c": "text-generation",
+        "d": "auto"
+      },
+      "correct_answer": "c",
+      "knowledge_area": "transformers",
+      "difficulty_level": "beginner",
+      "explanation": "The correct pipeline task name for text generation in Hugging Face transformers is 'text-generation'."
+    }
+  ]
+}
+
+  

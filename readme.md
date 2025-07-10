@@ -49,6 +49,12 @@ The primary objective of the AI Quiz & Recommendation System is to revolutionize
    python -c "from core.database import init_database; init_database()"
    ```
 
+**b. Optional Configuration** (Set Environment Variables)
+   ```
+   cp .env.example .env
+   # Edit .env with your API keys (optional)
+   ```
+
 ## Usage Guide
 
 - Start the Streamlit server:

@@ -106,17 +106,7 @@ AI_Quiz_System/
 │   └── prompts.py                  # Prompt templates and engineering strategies
 ├── data/
 │   ├── questions.json              # Comprehensive question database
-│   └── quiz_system.db              # SQLite database file
-├── tests/
-│   ├── __init__.py
-│   ├── test_quiz_engine.py         # Unit tests for quiz logic
-│   ├── test_database.py            # Database operation tests
-│   ├── test_recommendations.py     # Recommendation engine tests
-│   └── test_integration.py         # Integration and end-to-end tests
-├── .streamlit/
-│   └── config.toml                 # Streamlit configuration
 ├── requirements.txt                # Python dependencies
-├── requirements-dev.txt            # Development dependencies
 └── .env.example                    # Environment variables template
 ```
 

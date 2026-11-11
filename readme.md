@@ -62,3 +62,22 @@ The primary objective of the AI Quiz & Recommendation System is to revolutionize
   streamlit run app.py
   ```
 - The application will be available at `http://localhost:8501`
+
+## Citation
+
+If you use or build on this project, please cite it. GitHub's **"Cite this repository"** button (generated from [`CITATION.cff`](CITATION.cff)) provides APA and BibTeX formats.
+
+```bibtex
+@software{vaidya_aiquizsystem_2025,
+  author = {Vaidya, Prathamesh Sarjerao},
+  title  = {AI Quiz & Recommendation System},
+  year   = {2025},
+  url    = {https://github.com/Prathameshv07/AI_Quiz_System}
+}
+```
+
+## License
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+© 2025 Prathamesh Sarjerao Vaidya. This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/). You may share and adapt it for **non-commercial** purposes, provided you **give appropriate credit** and indicate any changes. See [LICENSE](LICENSE) for details.

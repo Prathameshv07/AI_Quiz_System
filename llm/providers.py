@@ -3,10 +3,9 @@ import asyncio
 import logging
 from dotenv import load_dotenv
 from typing import List, Optional, Dict, Any
-from langchain.llms import OpenAI
+from langchain_community.llms import OpenAI, Ollama
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-# from ..core.models import QuizResult, Recommendation, KnowledgeArea, DifficultyLevel
 from core.models import QuizResult, Recommendation, KnowledgeArea, DifficultyLevel
 
 load_dotenv()
@@ -28,8 +27,6 @@ class LLMProvider:
                 api_key = os.getenv("OPENAI_API_KEY")
                 if api_key:
                     self.llm = OpenAI(
-                        # temperature=0.7,
-                        # max_tokens=500,
                         temperature=0.3,
                         max_tokens=300,
                         openai_api_key=api_key
@@ -40,8 +37,6 @@ class LLMProvider:
             
             elif self.provider_type == "ollama":
                 try:
-                    from langchain.llms import Ollama
-                    # self.llm = Ollama(model="llama2")
                     self.llm = Ollama(
                         model="qwen2.5:1.5b-instruct-q4_K_M",
                         temperature=0.3,
